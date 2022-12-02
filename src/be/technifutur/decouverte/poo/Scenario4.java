@@ -7,7 +7,8 @@ public class Scenario4 {
                 new Soldat("Léon"),
                 new Jedi("Luc"),
                 new Sith("Dravador"),
-                new Clone()
+                new Clone(),
+                new Clone("Alfred")
         };
         Force toto;
 
