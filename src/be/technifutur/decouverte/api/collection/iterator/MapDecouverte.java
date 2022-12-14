@@ -41,7 +41,11 @@ public class MapDecouverte {
         }
 
         //boucles sur clé valeur
+<<<<<<< HEAD
         for(Map.Entry<Integer,Personne> entry: maMap.entrySet()){
+=======
+        for(Map.Entry entry: maMap.entrySet()){
+>>>>>>> origin/main
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
         }
