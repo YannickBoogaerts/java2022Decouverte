@@ -7,7 +7,8 @@ import be.technifutur.decouverte.poo.autre.Millenium;
 public class TestBoxHeritage {
 
     public static void main(String[] args) {
-        Box<VaisseauAncetre> vaisseauAncetreBox = new Box<>(new Millenium());
+        Millenium millenium = new Millenium();
+        Box<VaisseauAncetre> vaisseauAncetreBox = new Box<>(millenium);
 
         // Millenium v1 = boitevaisseauAncetreBox.getValue();
 
@@ -30,6 +31,9 @@ public class TestBoxHeritage {
 
         utiliseBoiteVaisseau3(vaisseauAncetreBox);
         utiliseBoiteVaisseau3(milleniumBox);
+
+        Millenium m = test(millenium);
+        //Millenium m2 = test(new Xwing(2));
     }
 
     static void utiliseBoiteVaisseau1(Box<VaisseauAncetre> box) {
@@ -83,5 +87,10 @@ public class TestBoxHeritage {
         if(!millenium.isEnVol()){
             boite.setValue(millenium);
         }
+    }
+
+    static <E extends VaisseauAncetre> E test(E monVaisseau){
+        monVaisseau.tirer();
+        return monVaisseau;
     }
 }
