@@ -6,8 +6,8 @@ public class Sith extends Empire implements Force{
     }
 
     @Override
-    public void combattre() {
-        System.out.println("Je combat comme un Sith");
+    public String combattre() {
+        return "Je combat comme un Sith";
     }
 
     @Override

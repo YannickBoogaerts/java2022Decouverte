@@ -6,8 +6,8 @@ public class Jedi extends Rebelle implements Force{
     }
 
     @Override
-    public void combattre() {
-        System.out.println("je combat comme un Jedi");
+    public String combattre() {
+        return("je combat comme un Jedi");
     }
 
     @Override

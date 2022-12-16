@@ -13,5 +13,7 @@ public abstract class Personnage {
 
     public abstract void afficheCamps();
 
-    public abstract void combattre();
+    public abstract String combattre();
+
+    public abstract boolean getCamp() ;
 }

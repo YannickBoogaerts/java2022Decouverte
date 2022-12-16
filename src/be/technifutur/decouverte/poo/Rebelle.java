@@ -9,4 +9,9 @@ public abstract class Rebelle extends Personnage {
     public void afficheCamps() {
         System.out.println("je suis un rebelle");
     }
+
+    @Override
+    public boolean getCamp() {
+        return false;
+    }
 }

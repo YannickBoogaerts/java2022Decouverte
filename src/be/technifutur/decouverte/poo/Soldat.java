@@ -6,7 +6,7 @@ public class Soldat extends Rebelle {
     }
 
     @Override
-    public void combattre() {
-        System.out.println("je combat comme un soldat");
+    public String combattre() {
+       return("je combat comme un soldat");
     }
 }

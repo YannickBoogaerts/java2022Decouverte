@@ -10,7 +10,7 @@ public class Clone extends Empire {
     }
 
     @Override
-    public void combattre() {
-        System.out.println("je combat comme Clone");
+    public String combattre() {
+        return ("je combat comme Clone");
     }
 }
