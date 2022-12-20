@@ -11,6 +11,10 @@ public abstract class Personnage {
         return nom;
     }
 
+    public void saluer(Personnage p){
+        System.out.printf("bonjour %s je m'appel %s",p.nom, this.nom);
+    }
+
     public abstract void afficheCamps();
 
     public abstract String combattre();

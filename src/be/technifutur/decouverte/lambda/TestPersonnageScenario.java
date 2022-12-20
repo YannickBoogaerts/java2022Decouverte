@@ -22,7 +22,7 @@ public class TestPersonnageScenario {
             p.afficheCamps();
         });
         scenario.addScennette(new MonBiconsumer());
-        scenario.addScennette((h,p) -> {
+        scenario.addScennette((Personnage h, Personnage p) -> {
             System.out.printf("%s: %n",h.getNom());
             h.combattre();
             System.out.printf("et %s %n",p.getNom());
@@ -46,6 +46,9 @@ public class TestPersonnageScenario {
             }
         });
         scenario.addScennette(TestPersonnageScenario::andorcemieuxquestarwars);
+        scenario.addScennette((a,b)->TestPersonnageScenario.andorcemieuxquestarwars(a,b));
+        scenario.addScennette(Personnage::saluer);
+        scenario.addScennette((h,p)-> h.saluer(p));
         scenario.run();
     }
     static void andorcemieuxquestarwars(Personnage A, Personnage C) {
