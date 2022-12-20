@@ -49,7 +49,13 @@ public class Test2 {
         Optional<Integer> max = vaisseauList.stream()
                                             .filter(v -> v.getNbMissiles() < 7)
                                             .map(v -> v.getNbMissiles())
-                                            .max(Integer::compareTo);
+                                            //.max(Integer::compareTo);
+                                            .max((n1, n2) -> n1.compareTo(n2));
+        Optional<Integer> max2 = vaisseauList.stream()
+                                            .map(v -> v.getNbMissiles())
+                                             .filter(i -> i < 7)
+                                            //.max(Integer::compareTo);
+                                            .max((n1, n2) -> n1.compareTo(n2));
         if (max.isEmpty()) {
             System.out.println("pas de max");
         } else {
@@ -58,10 +64,10 @@ public class Test2 {
 
         long count = vaisseauList.stream()
                                  .peek(v -> {
-                                     if(v.getNbMissiles()==10){
+                                     if (v.getNbMissiles() == 10) {
                                          v.decoller();
                                      }
-                                  })
+                                 })
                                  .filter(v -> v.isEnVol())
                                  .count();
         System.out.println(count);
